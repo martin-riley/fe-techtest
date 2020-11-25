@@ -1,3 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  text-align: center;
   color: red;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 25%;
+  
+}
+
+.button {
+  /* basic reset */
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaeeff;
+  border: 2px solid #00ccff;
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 1em 0;
+}
+
+.button:focus {
+  border-color: #000;
+}
+
+.button__multiple {
+  color: #fff;
+  background-color: #00ccff;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Approx. tablet size */
+  .container {
+    margin: 0 10%;
+    justify-content: space-between;
+  }
+  
+  .button {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* Approx. desktop size */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .button {
+    width: 30%;
+  }
 }
